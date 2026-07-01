@@ -1,5 +1,11 @@
 # @orimdominic/genkitx-mongodb
 
+## 1.0.1
+
+### Patch Changes
+
+- 7b7fbb3: Remove workspaces
+
 ## 1.2.0
 
 ### Minor Changes
