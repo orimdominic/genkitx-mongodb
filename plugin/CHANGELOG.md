@@ -1,5 +1,11 @@
 # @orimdominic/genkitx-mongodb
 
+## 1.2.0
+
+### Minor Changes
+
+- 6ce211b: fix: `jitterFactor` schema
+
 ## 1.1.0
 
 ### Minor Changes
