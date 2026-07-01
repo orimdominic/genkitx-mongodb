@@ -13,6 +13,9 @@ concurrency:
 jobs:
   build-plugin:
     runs-on: "ubuntu-latest"
+    defaults:
+      run:
+        working-directory: plugin
     strategy:
           matrix:
             node-version: [18.20.8]
