@@ -35,7 +35,7 @@
     "test": "jest --verbose",
     "test:coverage": "jest --coverage",
     "prepublishOnly": "pnpm run build",
-    "ci:publish": "changeset publish"
+    "ci:publish": "pnpm build && changeset publish"
   },
   "repository": {
     "type": "git",
