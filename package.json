@@ -1,5 +1,5 @@
 {
-  "name": "@orimdominic/genkitx-mongodb",
+  "name": "genkitx-mongodb",
   "version": "0.1.0",
   "engines": {
     "node": ">=18.20.8"

@@ -32,6 +32,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm --filter @orimdominic/genkitx-mongodb install
       - name: Build plugin
         run: pnpm run build:plugin
