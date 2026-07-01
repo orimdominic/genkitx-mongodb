@@ -11,6 +11,9 @@ importers:
 
   .:
     devDependencies:
+      '@changesets/cli':
+        specifier: ^2.31.0
+        version: 2.31.0(@types/node@18.19.121)
       '@types/node':
         specifier: ^18.19.0
         version: 18.19.121
@@ -57,9 +60,6 @@ importers:
         specifier: ^6.18.0
         version: 6.18.0
     devDependencies:
-      '@changesets/cli':
-        specifier: ^2.31.0
-        version: 2.31.0(@types/node@18.19.121)
       '@jest/globals':
         specifier: ^29.7.0
         version: 29.7.0
