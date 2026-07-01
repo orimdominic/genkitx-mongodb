@@ -1,35 +1,79 @@
 {
-  "name": "genkitx-mongodb",
-  "version": "0.1.0",
+  "name": "@orimdominic/genkitx-mongodb",
+  "version": "1.0.0",
   "engines": {
     "node": ">=18.20.8"
   },
+  "description": "Genkit AI framework plugin for MongoDB vector database.",
+  "keywords": [
+    "genkit",
+    "genkit-retriever",
+    "genkit-plugin",
+    "genkit-indexer",
+    "mongodb",
+    "vector",
+    "vector-search",
+    "text-search",
+    "hybrid-search",
+    "atlas-search"
+  ],
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "prepublishOnly": "pnpm run build",
+    "check": "tsc",
+    "compile": "tsup-node",
+    "build:clean": "rimraf ./lib",
+    "build": "npm-run-all build:clean check compile",
+    "build:watch": "tsup-node --watch",
+    "test": "jest --verbose",
+    "test:coverage": "jest --coverage",
     "format": "(prettier . --write) && (tsx scripts/copyright.ts)",
     "format:check": "(prettier . --check) && (tsx scripts/copyright.ts --check)",
-    "build": "pnpm install && pnpm build:plugin && pnpm build:testapp",
-    "build:plugin": "pnpm -r --workspace-concurrency -1 -F \"./plugin/**\" build",
-    "build:testapp": "pnpm -r --workspace-concurrency -1 -F \"./testapp/**\" build",
-    "test:all": "pnpm -r --workspace-concurrency -1 -F \"./(plugin|testapp)/**\" test",
     "gendocs": "pnpm build && pnpm typedoc",
     "typedoc-html": "typedoc --sortEntryPoints false --options typedoc.json",
     "ci:publish": "pnpm build:plugin && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.9",
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.12",
     "@types/node": "^18.19.0",
+    "genkit": "^1.39.0",
+    "jest": "^29.7.0",
+    "mongodb": "^6.18.0",
     "npm-run-all": "^4.1.5",
     "only-allow": "^1.2.1",
     "prettier": "^3.5.3",
     "prettier-plugin-css-order": "2.0.1",
     "prettier-plugin-organize-imports": "^3.2.4",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.5.0",
     "tsx": "^4.20.3",
     "typedoc": "^0.27.9",
     "typedoc-github-theme": "^0.2.1",
     "typedoc-plugin-markdown": "^4.6.4",
     "typedoc-plugin-zod": "^1.4.2",
-    "typescript": "^4.9.5"
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "genkit": "^1.39.0",
+    "mongodb": "^6.18.0"
+  },
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs",
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    }
   },
   "pnpm": {
     "overrides": {
@@ -37,8 +81,5 @@
       "human-id": "^3.0.1"
     }
   },
-  "packageManager": "pnpm@10.11.0+sha256.a69e9cb077da419d47d18f1dd52e207245b29cac6e076acedbeb8be3b1a67bd7",
-  "publishConfig": {
-    "access": "public"
-  }
+  "packageManager": "pnpm@10.11.0+sha256.a69e9cb077da419d47d18f1dd52e207245b29cac6e076acedbeb8be3b1a67bd7"
 }

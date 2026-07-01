@@ -1,8 +1,7 @@
 {
-  "entryPoints": ["plugin/"],
-  "name": "MongoDB Plugin Reference",
-  "out": "mongodb-plugin",
-  "entryPointStrategy": "packages",
+  "name": "Genkit MongoDB Reference",
+  "out": "docs",
+  "entryPoints": ["./src/index.ts"],
   "includeVersion": false,
   "sort": ["kind", "instance-first", "alphabetical"],
   "sortEntryPoints": true,
