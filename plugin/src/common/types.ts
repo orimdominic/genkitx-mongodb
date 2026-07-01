@@ -32,7 +32,7 @@ const MONGO_ID_REGEX = /^[0-9a-fA-F]{24}$/;
 const RetryOptionsSchema = z.object({
   retryAttempts: z.number().int().positive().optional(),
   baseDelay: z.number().int().positive().optional(),
-  jitterFactor: z.number().int().positive().optional(),
+  jitterFactor: z.number().min(0).max(1).optional(),
 });
 
 /** Configuration options for retry operations */
