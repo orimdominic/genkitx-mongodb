@@ -34,4 +34,4 @@ jobs:
       - name: Install dependencies
         run: pnpm --filter @orimdominic/genkitx-mongodb install
       - name: Build plugin
-        run: pnpm run build:plugin
+        run: pnpm run build
