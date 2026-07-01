@@ -5,6 +5,10 @@
     "node": ">=18.20.8"
   },
   "description": "Genkit AI framework plugin for MongoDB vector database.",
+  "repository": {
+    "url": "https://github.com/orimdominic/genkitx-mongodb",
+    "type": "git"
+  },
   "keywords": [
     "genkit",
     "genkit-retriever",
