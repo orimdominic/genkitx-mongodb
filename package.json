@@ -14,7 +14,7 @@
     "test:all": "pnpm -r --workspace-concurrency -1 -F \"./(plugin|testapp)/**\" test",
     "gendocs": "pnpm build && pnpm typedoc",
     "typedoc-html": "typedoc --sortEntryPoints false --options typedoc.json",
-    "ci:publish": "pnpm build:plugin && changeset publish --access public"
+    "ci:publish": "pnpm build:plugin && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.9",
