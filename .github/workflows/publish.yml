@@ -37,10 +37,8 @@ jobs:
           package-manager-cache: false
       - name: Install dependencies
         run: pnpm --filter @orimdominic/genkitx-mongodb install --frozen-lockfile
-      - name: Build plugin
-        run: pnpm run build
       - name: Create PR and publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm changeset publish
+          publish: pnpm ci:publish
