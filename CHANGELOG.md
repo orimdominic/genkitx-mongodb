@@ -1,5 +1,11 @@
 # @orimdominic/genkitx-mongodb
 
+## 1.0.3
+
+### Patch Changes
+
+- c10821a: verify package.json update for publishing
+
 ## 1.0.1
 
 ### Patch Changes
