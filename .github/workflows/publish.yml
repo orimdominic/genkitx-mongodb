@@ -33,13 +33,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
           package-manager-cache: false
       - name: Install dependencies
-        run: pnpm --filter @orimdominic/genkitx-mongodb install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
       - name: Debug OIDC
         run: |
-          echo "Node: $(node -v)"
-          echo "npm: $(npm -v)"
-          echo "OIDC URL present: ${ACTIONS_ID_TOKEN_REQUEST_URL:+yes}"
-          echo "OIDC TOKEN present: ${ACTIONS_ID_TOKEN_REQUEST_TOKEN:+yes}"
+          cat packages/genkitx-mongodb/package.json
       - name: Create PR and publish to npm
         id: changesets
         uses: changesets/action@v1
