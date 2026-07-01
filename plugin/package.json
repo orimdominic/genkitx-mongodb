@@ -34,7 +34,8 @@
     "build:watch": "tsup-node --watch",
     "test": "jest --verbose",
     "test:coverage": "jest --coverage",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "pnpm run build",
+    "ci:publish": "changeset publish"
   },
   "repository": {
     "type": "git",

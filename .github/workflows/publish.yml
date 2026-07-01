@@ -6,8 +6,10 @@ on:
       - main
 
 permissions:
+  contents: write
+  pull-requests: write
+  packages: write
   id-token: write
-  contents: read
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -41,4 +43,4 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish-script: pnpm changeset publish
+          publish: pnpm changeset publish
