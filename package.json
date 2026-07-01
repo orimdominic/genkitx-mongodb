@@ -37,7 +37,7 @@
     "format:check": "(prettier . --check) && (tsx scripts/copyright.ts --check)",
     "gendocs": "pnpm build && pnpm typedoc",
     "typedoc-html": "typedoc --sortEntryPoints false --options typedoc.json",
-    "ci:publish": "pnpm build:plugin && changeset publish"
+    "ci:publish": "pnpm build && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.9",
