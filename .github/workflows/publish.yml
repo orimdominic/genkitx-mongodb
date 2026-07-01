@@ -20,7 +20,7 @@ jobs:
     runs-on: "ubuntu-latest"
     strategy:
           matrix:
-            node-version: [18.20.8]
+            node-version: [24]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
@@ -34,9 +34,6 @@ jobs:
           package-manager-cache: false
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: Debug OIDC
-        run: |
-          cat packages/genkitx-mongodb/package.json
       - name: Create PR and publish to npm
         id: changesets
         uses: changesets/action@v1
