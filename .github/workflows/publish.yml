@@ -39,6 +39,6 @@ jobs:
         run: pnpm run build
       - name: Create PR and publish to npm
         id: changesets
-        uses: changesets/action@v3
+        uses: changesets/action@v1
         with:
           publish-script: pnpm changeset publish
