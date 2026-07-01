@@ -1,4 +1,4 @@
-name: ci
+name: CI
 
 on:
   pull_request:
@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-plugin:
+  build_plugin:
     runs-on: "ubuntu-latest"
     defaults:
       run:
@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
-      - name: Install pnpm
+      - name: Set up pnpm
         uses: pnpm/action-setup@v6
         with:
           cache: true
