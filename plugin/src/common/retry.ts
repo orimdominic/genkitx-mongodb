@@ -60,7 +60,7 @@ export async function retryWithDelay<T>(
   const baseDelay = retryOptions?.baseDelay ?? BASE_RETRY_DELAY_MS;
   const jitterFactor = retryOptions?.jitterFactor ?? JITTER_FACTOR;
 
-  let lastError: Error = new Error("Unknown error");
+  let lastError = new Error("Unknown error");
 
   for (let attempt = 1; attempt <= retryAttempts + 1; attempt++) {
     try {

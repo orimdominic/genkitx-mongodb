@@ -371,6 +371,6 @@ const results = await ai.retrieve({
 
 ## Additional Resources
 
-- **Repository**: [genkitx-mongodb](https://github.com/mongodb-partners/genkitx-mongodb) - Full source code and detailed documentation
-- **Plugin**: [plugin/](https://github.com/mongodb-partners/genkitx-mongodb/tree/main/plugin) - Plugin source code and documentation
-- **Test Application**: [testapp/](https://github.com/mongodb-partners/genkitx-mongodb/tree/main/testapp) - Working example of a Genkit application that uses this plugin with various use cases including document processing, image analysis, and menu search
+- **Repository**: [genkitx-mongodb](https://github.com/orimdominic/genkitx-mongodb) - Full source code and detailed documentation
+- **Plugin**: [plugin/](https://github.com/orimdominic/genkitx-mongodb/tree/main/plugin) - Plugin source code and documentation
+- **Test Application**: [testapp/](https://github.com/orimdominic/genkitx-mongodb/tree/main/testapp) - Working example of a Genkit application that uses this plugin with various use cases including document processing, image analysis, and menu search
