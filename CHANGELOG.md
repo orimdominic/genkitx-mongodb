@@ -1,5 +1,11 @@
 # @orimdominic/genkitx-mongodb
 
+## 1.1.0
+
+### Minor Changes
+
+- 6166a9b: fix: allow mongo client versions >= 6
+
 ## 1.0.3
 
 ### Patch Changes
